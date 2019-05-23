@@ -3,7 +3,6 @@
 
 from gpkeras import parameters
 import argparse
-import os
 
 
 def get_argument_parser(description='Training Pnarameters'):
@@ -92,6 +91,10 @@ class TrainingParameters(parameters.TrainingParameters):
                         'adaptsegnet_adversary_strides',
                         'adaptsegnet_adversary_alpha',
                         ]
+
+        self.formatted_params += [
+            'dataset_directory',
+        ]
 
         super(parameters.TrainingParameters, self).__init__(args)
 
