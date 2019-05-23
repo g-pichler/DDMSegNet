@@ -1,0 +1,222 @@
+{
+ "training": [
+  {
+   "A_T1": "TrainingData/1/T1.nii",
+   "B_T1": "TrainingData/1/T1.nii",
+   "A_T2_FLAIR": "TrainingData/1/T2_FLAIR.nii",
+   "B_T2_FLAIR": "TrainingData/1/T2_FLAIR.nii",
+   "A_T1_IR": "TrainingData/1/T1_IR.nii",
+   "B_T1_IR": "TrainingData/1/T1_IR.nii",
+   "A_T1_1mm": "TrainingData/1/T1_1mm.nii",
+   "B_T1_1mm": "TrainingData/1/T1_1mm.nii",
+   "Labels": "TrainingData/1/LabelsForTraining.nii",
+   "Labels": "TrainingData/1/LabelsForTraining.nii"
+  },
+  {
+   "A_T1": "TrainingData/2/T1.nii",
+   "B_T1": "TrainingData/2/T1.nii",
+   "A_T2_FLAIR": "TrainingData/2/T2_FLAIR.nii",
+   "B_T2_FLAIR": "TrainingData/2/T2_FLAIR.nii",
+   "A_T1_IR": "TrainingData/2/T1_IR.nii",
+   "B_T1_IR": "TrainingData/2/T1_IR.nii",
+   "A_T1_1mm": "TrainingData/2/T1_1mm.nii",
+   "B_T1_1mm": "TrainingData/2/T1_1mm.nii",
+   "Labels": "TrainingData/2/LabelsForTraining.nii",
+   "Labels": "TrainingData/2/LabelsForTraining.nii"
+  },
+  {
+   "A_T1": "TrainingData/3/T1.nii",
+   "B_T1": "TrainingData/3/T1.nii",
+   "A_T2_FLAIR": "TrainingData/3/T2_FLAIR.nii",
+   "B_T2_FLAIR": "TrainingData/3/T2_FLAIR.nii",
+   "A_T1_IR": "TrainingData/3/T1_IR.nii",
+   "B_T1_IR": "TrainingData/3/T1_IR.nii",
+   "A_T1_1mm": "TrainingData/3/T1_1mm.nii",
+   "B_T1_1mm": "TrainingData/3/T1_1mm.nii",
+   "Labels": "TrainingData/3/LabelsForTraining.nii",
+   "Labels": "TrainingData/3/LabelsForTraining.nii"
+  },
+  {
+   "A_T1": "TrainingData/4/T1.nii",
+   "B_T1": "TrainingData/4/T1.nii",
+   "A_T2_FLAIR": "TrainingData/4/T2_FLAIR.nii",
+   "B_T2_FLAIR": "TrainingData/4/T2_FLAIR.nii",
+   "A_T1_IR": "TrainingData/4/T1_IR.nii",
+   "B_T1_IR": "TrainingData/4/T1_IR.nii",
+   "A_T1_1mm": "TrainingData/4/T1_1mm.nii",
+   "B_T1_1mm": "TrainingData/4/T1_1mm.nii",
+   "Labels": "TrainingData/4/LabelsForTraining.nii",
+   "Labels": "TrainingData/4/LabelsForTraining.nii"
+  },
+  {
+   "A_T1": "TrainingData/5/T1.nii",
+   "B_T1": "TrainingData/5/T1.nii",
+   "A_T2_FLAIR": "TrainingData/5/T2_FLAIR.nii",
+   "B_T2_FLAIR": "TrainingData/5/T2_FLAIR.nii",
+   "A_T1_IR": "TrainingData/5/T1_IR.nii",
+   "B_T1_IR": "TrainingData/5/T1_IR.nii",
+   "A_T1_1mm": "TrainingData/5/T1_1mm.nii",
+   "B_T1_1mm": "TrainingData/5/T1_1mm.nii",
+   "Labels": "TrainingData/5/LabelsForTraining.nii",
+   "Labels": "TrainingData/5/LabelsForTraining.nii"
+  }
+ ],
+ "testing": [
+  {
+   "A_T1": "TestData/1/T1.nii",
+   "B_T1": "aligned/1_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/1/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/1_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/1/T1_IR.nii",
+   "B_T1_IR": "aligned/1_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/1/T1_1mm.nii",
+   "B_T1_1mm": "aligned/1_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/2/T1.nii",
+   "B_T1": "aligned/2_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/2/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/2_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/2/T1_IR.nii",
+   "B_T1_IR": "aligned/2_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/2/T1_1mm.nii",
+   "B_T1_1mm": "aligned/2_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/3/T1.nii",
+   "B_T1": "aligned/3_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/3/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/3_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/3/T1_IR.nii",
+   "B_T1_IR": "aligned/3_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/3/T1_1mm.nii",
+   "B_T1_1mm": "aligned/3_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/4/T1.nii",
+   "B_T1": "aligned/4_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/4/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/4_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/4/T1_IR.nii",
+   "B_T1_IR": "aligned/4_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/4/T1_1mm.nii",
+   "B_T1_1mm": "aligned/4_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/5/T1.nii",
+   "B_T1": "aligned/5_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/5/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/5_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/5/T1_IR.nii",
+   "B_T1_IR": "aligned/5_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/5/T1_1mm.nii",
+   "B_T1_1mm": "aligned/5_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/6/T1.nii",
+   "B_T1": "aligned/6_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/6/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/6_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/6/T1_IR.nii",
+   "B_T1_IR": "aligned/6_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/6/T1_1mm.nii",
+   "B_T1_1mm": "aligned/6_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/7/T1.nii",
+   "B_T1": "aligned/7_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/7/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/7_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/7/T1_IR.nii",
+   "B_T1_IR": "aligned/7_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/7/T1_1mm.nii",
+   "B_T1_1mm": "aligned/7_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/8/T1.nii",
+   "B_T1": "aligned/8_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/8/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/8_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/8/T1_IR.nii",
+   "B_T1_IR": "aligned/8_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/8/T1_1mm.nii",
+   "B_T1_1mm": "aligned/8_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/9/T1.nii",
+   "B_T1": "aligned/9_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/9/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/9_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/9/T1_IR.nii",
+   "B_T1_IR": "aligned/9_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/9/T1_1mm.nii",
+   "B_T1_1mm": "aligned/9_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/10/T1.nii",
+   "B_T1": "aligned/10_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/10/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/10_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/10/T1_IR.nii",
+   "B_T1_IR": "aligned/10_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/10/T1_1mm.nii",
+   "B_T1_1mm": "aligned/10_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/11/T1.nii",
+   "B_T1": "aligned/11_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/11/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/11_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/11/T1_IR.nii",
+   "B_T1_IR": "aligned/11_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/11/T1_1mm.nii",
+   "B_T1_1mm": "aligned/11_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/12/T1.nii",
+   "B_T1": "aligned/12_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/12/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/12_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/12/T1_IR.nii",
+   "B_T1_IR": "aligned/12_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/12/T1_1mm.nii",
+   "B_T1_1mm": "aligned/12_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/13/T1.nii",
+   "B_T1": "aligned/13_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/13/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/13_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/13/T1_IR.nii",
+   "B_T1_IR": "aligned/13_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/13/T1_1mm.nii",
+   "B_T1_1mm": "aligned/13_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/14/T1.nii",
+   "B_T1": "aligned/14_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/14/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/14_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/14/T1_IR.nii",
+   "B_T1_IR": "aligned/14_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/14/T1_1mm.nii",
+   "B_T1_1mm": "aligned/14_T1_1mm.nii.gz"
+  },
+  {
+   "A_T1": "TestData/15/T1.nii",
+   "B_T1": "aligned/15_T1.nii.gz",
+   "A_T2_FLAIR": "TestData/15/T2_FLAIR.nii",
+   "B_T2_FLAIR": "aligned/15_T2_FLAIR.nii.gz",
+   "A_T1_IR": "TestData/15/T1_IR.nii",
+   "B_T1_IR": "aligned/15_T1_IR.nii.gz",
+   "A_T1_1mm": "TestData/15/T1_1mm.nii",
+   "B_T1_1mm": "aligned/15_T1_1mm.nii.gz"
+  }
+ ],
+ "frequencies": [
+  0.8333025896990741,
+  0.06743800636574074,
+  0.0454921875,
+  0.053767216435185186
+ ]
+}

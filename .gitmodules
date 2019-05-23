@@ -1,0 +1,3 @@
+[submodule "gpkeras"]
+	path = .gpkeras
+	url = https://github.com/anonymauthor/gpkeras.git

@@ -1,0 +1,114 @@
+{
+ "training": [
+  {
+   "T1": "subject-1-T1.img",
+   "T2": "subject-1-T2.img",
+   "Labels": "subject-1-label.img"
+  },
+  {
+   "T1": "subject-2-T1.img",
+   "T2": "subject-2-T2.img",
+   "Labels": "subject-2-label.img"
+  },
+  {
+   "T1": "subject-3-T1.img",
+   "T2": "subject-3-T2.img",
+   "Labels": "subject-3-label.img"
+  },
+  {
+   "T1": "subject-4-T1.img",
+   "T2": "subject-4-T2.img",
+   "Labels": "subject-4-label.img"
+  },
+  {
+   "T1": "subject-5-T1.img",
+   "T2": "subject-5-T2.img",
+   "Labels": "subject-5-label.img"
+  },
+  {
+   "T1": "subject-6-T1.img",
+   "T2": "subject-6-T2.img",
+   "Labels": "subject-6-label.img"
+  },
+  {
+   "T1": "subject-7-T1.img",
+   "T2": "subject-7-T2.img",
+   "Labels": "subject-7-label.img"
+  },
+  {
+   "T1": "subject-8-T1.img",
+   "T2": "subject-8-T2.img",
+   "Labels": "subject-8-label.img"
+  },
+  {
+   "T1": "subject-9-T1.img",
+   "T2": "subject-9-T2.img",
+   "Labels": "subject-9-label.img"
+  },
+  {
+   "T1": "subject-10-T1.img",
+   "T2": "subject-10-T2.img",
+   "Labels": "subject-10-label.img"
+  }
+ ],
+ "testing": [
+  {
+   "T1": "subject-11-T1.img",
+   "T2": "subject-11-T2.img"
+  },
+  {
+   "T1": "subject-12-T1.img",
+   "T2": "subject-12-T2.img"
+  },
+  {
+   "T1": "subject-13-T1.img",
+   "T2": "subject-13-T2.img"
+  },
+  {
+   "T1": "subject-14-T1.img",
+   "T2": "subject-14-T2.img"
+  },
+  {
+   "T1": "subject-15-T1.img",
+   "T2": "subject-15-T2.img"
+  },
+  {
+   "T1": "subject-16-T1.img",
+   "T2": "subject-16-T2.img"
+  },
+  {
+   "T1": "subject-17-T1.img",
+   "T2": "subject-17-T2.img"
+  },
+  {
+   "T1": "subject-18-T1.img",
+   "T2": "subject-18-T2.img"
+  },
+  {
+   "T1": "subject-19-T1.img",
+   "T2": "subject-19-T2.img"
+  },
+  {
+   "T1": "subject-20-T1.img",
+   "T2": "subject-20-T2.img"
+  },
+  {
+   "T1": "subject-21-T1.img",
+   "T2": "subject-21-T2.img"
+  },
+  {
+   "T1": "subject-22-T1.img",
+   "T2": "subject-22-T2.img"
+  },
+  {
+   "T1": "subject-23-T1.img",
+   "T2": "subject-23-T2.img"
+  }
+ ],
+ "frequencies": [
+  0.8870683740686487,
+  0.05337617662217882,
+  0.03473263493290654,
+  0.024822814376265913
+ ]
+}
