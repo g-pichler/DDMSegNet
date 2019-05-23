@@ -96,7 +96,7 @@ class TrainingParameters(parameters.TrainingParameters):
             'dataset_directory',
         ]
 
-        super(parameters.TrainingParameters, self).__init__(args)
+        super().__init__(args)
 
     def _check_dataset(self):
         assert self.dataset in ('iseg', 'mrbrains13')
