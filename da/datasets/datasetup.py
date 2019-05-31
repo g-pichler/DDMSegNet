@@ -41,7 +41,7 @@ def do_aligned(dataset, testing_list=None,
         def registration_algorithm(src_img):
             return sitk.AffineTransform(3)
 
-    new_dataset = dataset + suffix
+    new_dataset = '{}_{}'.format(dataset, suffix)
     dataset = get_dataset(dataset=dataset)
     os.chdir(dataset.base_directory)
 
