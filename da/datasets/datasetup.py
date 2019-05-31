@@ -32,8 +32,16 @@ def get_dataset(dataset, arguments=None) -> settings.Dataset:
     return dataset
 
 
-def do_aligned(dataset, testing_list=None, alignment_class='T1'):
-    new_dataset = dataset + '_aligned'
+def do_aligned(dataset, testing_list=None,
+               alignment_class='T1',
+               registration_algorithm=None,
+               suffix='aligned'):
+
+    if registration_algorithm is None:
+        def registration_algorithm(src_img):
+            return sitk.AffineTransform(3)
+
+    new_dataset = dataset + suffix
     dataset = get_dataset(dataset=dataset)
     os.chdir(dataset.base_directory)
 
@@ -42,7 +50,7 @@ def do_aligned(dataset, testing_list=None, alignment_class='T1'):
     testing_list2 = testing_list[1:] + testing_list[:1]
 
     new_classes = tuple(chain(*[['{}_{}'.format(x, cls) for x in ('A', 'B')] for cls in dataset.Classes]))
-    new_base_directory = Path('aligned')
+    new_base_directory = Path(suffix)
     os.makedirs(str(new_base_directory), exist_ok=True)
 
     new_dataset = settings.Dataset(new_dataset,
@@ -111,7 +119,7 @@ def do_aligned(dataset, testing_list=None, alignment_class='T1'):
 
         # Set the initial moving and optimized transforms.
         # optimized_transform = sitk.Similarity3DTransform()
-        opt_transform = sitk.AffineTransform(3)
+        opt_transform = registration_algorithm(src_sitk_img)
         registration_method.SetMovingInitialTransform(transform_v0)
         registration_method.SetInitialTransform(opt_transform)
 
