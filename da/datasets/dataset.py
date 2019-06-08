@@ -21,6 +21,7 @@ class NiftiDataset_2D:
     train_unlabeled: dataloader.NiftiSequence_2D
     test_labeled: dataloader.NiftiSequence_2D
     test_unlabeled: dataloader.NiftiSequence_2D
+    evaluation_list: List[Dict[str, str]]
     train_labeled_list: List[Dict[str, str]]
     train_unlabeled_list: List[Dict[str, str]]
     test_labeled_list: List[Dict[str, str]]
@@ -67,10 +68,11 @@ class NiftiDataset_2D:
 
         worker_training_indices = list(range(len(self.training_list)))
         worker_testing_indices = args.testing_indices
-        for i in args.testing_indices:
+        worker_evaluation_indices = args.evaluation_indices
+        for i in args.testing_indices + args.evaluation_indices:
             del worker_training_indices[worker_training_indices.index(i)]
 
-        assert all([i not in worker_training_indices for i in worker_testing_indices])
+        assert all([i not in worker_training_indices for i in worker_testing_indices + worker_evaluation_indices])
 
         frequencies_np = np.array(self.frequencies)
         p_weights = 1 / frequencies_np
@@ -90,6 +92,8 @@ class NiftiDataset_2D:
                 return np.sum(myweight * p_weights)
         else:
             logger.debug("Not weighting training samples")
+
+        self.evaluation_list = [self.training_list[i] for i in worker_evaluation_indices]
 
         data_list: List[Tuple[str, ...]] = list()
         label_list: List[Tuple[str, ...]] = list()

@@ -10,6 +10,7 @@ class TrainingParameters(parameters.TrainingParameters):
     source_class: str
     target_class: str
     testing_indices: Tuple[int, ...]
+    evaluation_indices: Tuple[int, ...]
     weight_training_samples: bool
     dropout: float
     dataset_shuffle: bool

@@ -23,6 +23,8 @@ def get_argument_parser(description='Training Pnarameters'):
                         help='Dropout for the network')
     parser.add_argument("--testing_indices", nargs='+', type=int,
                         default=(0,), help="Indices for testing")
+    parser.add_argument("--evaluation_indices", nargs='+', type=int,
+                        default=(), help="Indices for evaluation")
     parser.add_argument("--no-weight-samples", action="store_false", default=True,
                         dest='weight_training_samples', help="Weight the training samples by occurrence of classes")
     parser.add_argument("--dataset_shuffle", action="store_true", default=False,
@@ -46,10 +48,10 @@ def get_argument_parser(description='Training Pnarameters'):
     parser.add_argument('--adaptsegnet_adversary_lr', type=float, default=1e-4,
                         help='Learning rate for the adversary')
     parser.add_argument('--adaptsegnet_segnet_steps', type=int, default=1,
-                        help='Number of batches for the segmentation network '
+                        help='Number of batches the segmentation network '
                              'sees before the adversary is trained again')
     parser.add_argument('--adaptsegnet_adversary_steps', type=int, default=1,
-                        help='Number of batches for the adversary '
+                        help='Number of batches the adversary '
                              'sees before the segnet is trained again')
     parser.add_argument('--unet_padding', type=str, default='valid',
                         choices=('valid', 'same'), help='Padding for the U-Net')
@@ -73,6 +75,7 @@ class TrainingParameters(parameters.TrainingParameters):
                         'target_class',
                         'dropout',
                         'testing_indices',
+                        'evaluation_indices',
                         'weight_training_samples',
                         'dataset_shuffle',
                         'avoid_ram',
@@ -96,7 +99,17 @@ class TrainingParameters(parameters.TrainingParameters):
             'dataset_directory',
         ]
 
+        self._check_list.append(self._check_dataset)
+        self._check_list.append(self._check_indices)
+
         super().__init__(args)
 
     def _check_dataset(self):
-        assert self.dataset in ('iseg', 'mrbrains13')
+        assert self.dataset_name in ('iseg',
+                                     'mrbrains13',
+                                     'iseg_aligned',
+                                     'mrbrains13_aligned',
+                                     )
+
+    def _check_indices(self):
+        assert not set(self.testing_indices).intersection(set(self.evaluation_indices))
