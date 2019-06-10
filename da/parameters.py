@@ -22,9 +22,9 @@ def get_argument_parser(description='Training Pnarameters'):
     parser.add_argument('--dropout', type=float, default=-1.0,
                         help='Dropout for the network')
     parser.add_argument("--testing_indices", nargs='+', type=int,
-                        default=(0,), help="Indices for testing")
+                        default=[0], help="Indices for testing")
     parser.add_argument("--evaluation_indices", nargs='+', type=int,
-                        default=(), help="Indices for evaluation")
+                        default=[], help="Indices for evaluation")
     parser.add_argument("--no-weight-samples", action="store_false", default=True,
                         dest='weight_training_samples', help="Weight the training samples by occurrence of classes")
     parser.add_argument("--dataset_shuffle", action="store_true", default=False,
