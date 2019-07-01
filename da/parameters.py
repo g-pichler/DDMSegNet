@@ -109,6 +109,8 @@ class TrainingParameters(parameters.TrainingParameters):
                                      'mrbrains13',
                                      'iseg_aligned',
                                      'mrbrains13_aligned',
+                                     'iseg_aligned_disjoint',
+                                     'mrbrains13_aligned_disjoint',
                                      )
 
     def _check_indices(self):

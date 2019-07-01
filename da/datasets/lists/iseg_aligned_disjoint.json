@@ -1,0 +1,118 @@
+{
+ "training": [
+  {
+   "A_T1": "subject-1-T1.img",
+   "B_T1": "subject-1-T1.img",
+   "A_T2": "subject-1-T2.img",
+   "B_T2": "subject-1-T2.img",
+   "Labels": "subject-1-label.img"
+  },
+  {
+   "A_T1": "subject-2-T1.img",
+   "B_T1": "subject-2-T1.img",
+   "A_T2": "subject-2-T2.img",
+   "B_T2": "subject-2-T2.img",
+   "Labels": "subject-2-label.img"
+  },
+  {
+   "A_T1": "subject-3-T1.img",
+   "B_T1": "subject-3-T1.img",
+   "A_T2": "subject-3-T2.img",
+   "B_T2": "subject-3-T2.img",
+   "Labels": "subject-3-label.img"
+  },
+  {
+   "A_T1": "subject-4-T1.img",
+   "B_T1": "subject-4-T1.img",
+   "A_T2": "subject-4-T2.img",
+   "B_T2": "subject-4-T2.img",
+   "Labels": "subject-4-label.img"
+  },
+  {
+   "A_T1": "subject-5-T1.img",
+   "B_T1": "subject-5-T1.img",
+   "A_T2": "subject-5-T2.img",
+   "B_T2": "subject-5-T2.img",
+   "Labels": "subject-5-label.img"
+  },
+  {
+   "A_T1": "subject-6-T1.img",
+   "B_T1": "subject-6-T1.img",
+   "A_T2": "subject-6-T2.img",
+   "B_T2": "subject-6-T2.img",
+   "Labels": "subject-6-label.img"
+  },
+  {
+   "A_T1": "subject-7-T1.img",
+   "B_T1": "subject-7-T1.img",
+   "A_T2": "subject-7-T2.img",
+   "B_T2": "subject-7-T2.img",
+   "Labels": "subject-7-label.img"
+  },
+  {
+   "A_T1": "subject-8-T1.img",
+   "B_T1": "subject-8-T1.img",
+   "A_T2": "subject-8-T2.img",
+   "B_T2": "subject-8-T2.img",
+   "Labels": "subject-8-label.img"
+  },
+  {
+   "A_T1": "subject-9-T1.img",
+   "B_T1": "subject-9-T1.img",
+   "A_T2": "subject-9-T2.img",
+   "B_T2": "subject-9-T2.img",
+   "Labels": "subject-9-label.img"
+  },
+  {
+   "A_T1": "subject-10-T1.img",
+   "B_T1": "subject-10-T1.img",
+   "A_T2": "subject-10-T2.img",
+   "B_T2": "subject-10-T2.img",
+   "Labels": "subject-10-label.img"
+  }
+ ],
+ "testing": [
+  {
+   "A_T1": "subject-11-T1.img",
+   "B_T1": "aligned/1_T1.nii.gz",
+   "A_T2": "subject-11-T2.img",
+   "B_T2": "aligned/1_T2.nii.gz"
+  },
+  {
+   "A_T1": "subject-13-T1.img",
+   "B_T1": "aligned/3_T1.nii.gz",
+   "A_T2": "subject-13-T2.img",
+   "B_T2": "aligned/3_T2.nii.gz"
+  },
+  {
+   "A_T1": "subject-15-T1.img",
+   "B_T1": "aligned/5_T1.nii.gz",
+   "A_T2": "subject-15-T2.img",
+   "B_T2": "aligned/5_T2.nii.gz"
+  },
+  {
+   "A_T1": "subject-17-T1.img",
+   "B_T1": "aligned/7_T1.nii.gz",
+   "A_T2": "subject-17-T2.img",
+   "B_T2": "aligned/7_T2.nii.gz"
+  },
+  {
+   "A_T1": "subject-19-T1.img",
+   "B_T1": "aligned/9_T1.nii.gz",
+   "A_T2": "subject-19-T2.img",
+   "B_T2": "aligned/9_T2.nii.gz"
+  },
+  {
+   "A_T1": "subject-21-T1.img",
+   "B_T1": "aligned/11_T1.nii.gz",
+   "A_T2": "subject-21-T2.img",
+   "B_T2": "aligned/11_T2.nii.gz"
+  }
+ ],
+ "frequencies": [
+  0.8870683740686487,
+  0.05337617662217882,
+  0.03473263493290654,
+  0.024822814376265913
+ ]
+}

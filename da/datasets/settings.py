@@ -47,6 +47,13 @@ datasets: Tuple[Dataset, ...] = (
                  'testing': ((0, 7, 8), (1, 2), (3, 4), (5, 6)),
              },
              ),
+    Dataset('mrbrains13_aligned_disjoint',
+             ('A_T1', 'B_T1', 'A_T2_FLAIR', 'B_T2_FLAIR', 'A_T1_IR', 'B_T1_IR', 'A_T1_1mm', 'B_T1_1mm'),
+             {
+                 'training': ((0, 7, 8), (1, 2), (3, 4), (5, 6)),
+                 'testing': ((0, 7, 8), (1, 2), (3, 4), (5, 6)),
+             },
+             ),
      Dataset('iseg',
              ('T1', 'T2'),
              {
@@ -55,6 +62,13 @@ datasets: Tuple[Dataset, ...] = (
              },
              ),
      Dataset('iseg_aligned',
+             ('A_T1', 'B_T1', 'A_T2', 'B_T2'),
+             {
+                 'training': ((0,), (150,), (250,), (10,)),
+                 'testing': ((0,), (150,), (250,), (10,)),
+             },
+             ),
+     Dataset('iseg_aligned_disjoint',
              ('A_T1', 'B_T1', 'A_T2', 'B_T2'),
              {
                  'training': ((0,), (150,), (250,), (10,)),

@@ -2,7 +2,7 @@
 # *-* encoding: utf-8 *-*
 
 
-from da.datasets.datasetup import do_aligned, get_dataset
+from da.datasets.datasetup import do_aligned, do_aligned_disjoint, get_dataset
 
 import sys
 import logging
@@ -23,3 +23,4 @@ else:
     d = get_dataset(dataset)
     testing_list = d.lists['testing'][:-1]  # The last image has different dimensions, so we exclude it
     do_aligned(dataset, testing_list, alignment_class)
+    do_aligned_disjoint('{}_{}'.format(dataset, 'aligned'))

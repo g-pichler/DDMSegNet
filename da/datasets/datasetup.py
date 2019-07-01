@@ -36,7 +36,6 @@ def do_aligned(dataset, testing_list=None,
                alignment_class='T1',
                registration_algorithm=None,
                suffix='aligned'):
-
     if registration_algorithm is None:
         def registration_algorithm(src_img):
             return sitk.AffineTransform(3)
@@ -73,10 +72,10 @@ def do_aligned(dataset, testing_list=None,
 
     n_imgs = len(testing_list)
 
-    #transform_v1 = None
-    #src_sitk_img = None
-    #first_transform = None
-    #first_src_sitk_img = None
+    # transform_v1 = None
+    # src_sitk_img = None
+    # first_transform = None
+    # first_src_sitk_img = None
     for i in range(n_imgs):
         logger.info("Doing {}/{} ...".format(i + 1, n_imgs))
         src_path = testing_list[i][alignment_class]
@@ -151,17 +150,39 @@ def do_aligned(dataset, testing_list=None,
             fdata = np.squeeze(fdata)
             sitk_img: sitk.Image = sitk.GetImageFromArray(fdata)
             img_resampled: sitk.Image = sitk.Resample(sitk_img, src_sitk_img, transform_v1,
-                                                  sitk.sitkLinear, 0, sitk_img.GetPixelIDValue())
+                                                      sitk.sitkLinear, 0, sitk_img.GetPixelIDValue())
             np_out = sitk.GetArrayFromImage(img_resampled)
             if expand_dim:
                 np_out = np.expand_dims(np_out, axis=-1)
             nifti_out = nib.Nifti1Image(np_out, img.affine, img.header)
 
             list_entry['{}_{}'.format('A', cls)] = testing_list[i][cls]
-            out_path = new_base_directory / '{!s}_{}.nii.gz'.format(i+1, cls)
+            out_path = new_base_directory / '{!s}_{}.nii.gz'.format(i + 1, cls)
             list_entry['{}_{}'.format('B', cls)] = str(out_path)
             nib.save(nifti_out, str(out_path))
         new_dataset.lists['testing'].append(list_entry)
+
+    with open(new_dataset.lists_file, 'w') as fp:
+        json.dump(new_dataset.lists, fp, indent=1)
+
+
+def do_aligned_disjoint(dataset, suffix='disjoint'):
+    base_dataset = next((x for x in settings.datasets if x.Name == dataset), None)
+    new_dataset = '{}_{}'.format(dataset, suffix)
+    dataset = get_dataset(dataset=dataset)
+
+    new_dataset = settings.Dataset(new_dataset,
+                                   Classes=dataset.Classes,
+                                   label_merging=dataset.label_merging,
+                                   base_directory=dataset.base_directory,
+                                   lists=dataset.lists.copy())
+    new_dataset.lists['testing'] = list()
+
+    flip = True
+    for item in base_dataset.lists['testing'][:-1]:
+        if flip:
+            new_dataset.lists['testing'].append(item)
+        flip = not flip
 
     with open(new_dataset.lists_file, 'w') as fp:
         json.dump(new_dataset.lists, fp, indent=1)

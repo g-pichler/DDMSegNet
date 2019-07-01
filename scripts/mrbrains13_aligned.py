@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # *-* encoding: utf-8 *-*
 
-from da.datasets.datasetup import do_aligned
+from da.datasets.datasetup import do_aligned, do_aligned_disjoint
 import sys
 import logging
 
@@ -18,3 +18,4 @@ else:
     logging.basicConfig(level=logging.DEBUG)
     logger.setLevel(logging.DEBUG)
     do_aligned(dataset, alignment_class=alignment_class)
+    do_aligned_disjoint('{}_{}'.format(dataset, 'aligned'))
